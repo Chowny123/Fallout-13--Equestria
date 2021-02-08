@@ -13,7 +13,7 @@
 // END_PREFERENCES
 
 // BEGIN_INCLUDE
-#include "_maps\_oregon.dm"
+#include "_maps\runtimestation.dm"
 #include "_maps\templates\fallout_templates.dm"
 #include "_maps\templates\oasisbunker\east_minibunker.dm"
 #include "_maps\templates\ranch\ranch.dm"
@@ -2013,8 +2013,8 @@
 #include "code\modules\mob\dead\new_player\sprite_accessories\caps.dm"
 #include "code\modules\mob\dead\new_player\sprite_accessories\ears.dm"
 #include "code\modules\mob\dead\new_player\sprite_accessories\frills.dm"
-#include "code\modules\mob\dead\new_player\sprite_accessories\hair_face.dm"
 #include "code\modules\mob\dead\new_player\sprite_accessories\hair_head.dm"
+#include "code\modules\mob\dead\new_player\sprite_accessories\hair_tail.dm"
 #include "code\modules\mob\dead\new_player\sprite_accessories\horns.dm"
 #include "code\modules\mob\dead\new_player\sprite_accessories\legs.dm"
 #include "code\modules\mob\dead\new_player\sprite_accessories\snouts.dm"

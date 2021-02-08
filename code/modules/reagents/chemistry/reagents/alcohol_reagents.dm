@@ -2331,8 +2331,8 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	if(M && ishuman(M))
 		var/mob/living/carbon/human/H = M
 		H.hair_style = "Business Hair 4"
-		H.facial_hair_style = "Shaved"
-		H.facial_hair_color = "#FFFF99"
+		H.tail_hair_style = "Shaved"
+		H.tail_hair_color = "#FFFF99"
 		H.hair_color = "#FFFF99"
 		H.update_hair()
 		..()
@@ -2367,8 +2367,8 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	if(M && ishuman(M))
 		var/mob/living/carbon/human/H = M
 		H.hair_style = "Over Eye"
-		H.facial_hair_style = "Shaved"
-		H.facial_hair_color = "#FFFF99"
+		H.tail_hair_style = "Shaved"
+		H.tail_hair_color = "#FFFF99"
 		H.hair_color = "#FFFF99"
 		H.update_hair()
 		..()

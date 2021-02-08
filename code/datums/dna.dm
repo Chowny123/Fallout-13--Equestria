@@ -103,10 +103,10 @@
 		L[DNA_HAIR_STYLE_BLOCK] = construct_block(GLOB.hair_styles_list.Find(H.hair_style), GLOB.hair_styles_list.len)
 		L[DNA_EYE_COLOR_BLOCK] = sanitize_hexcolor(H.eye_color)
 		L[DNA_HAIR_COLOR_BLOCK] = sanitize_hexcolor(H.hair_color)
-		if(!GLOB.facial_hair_styles_list.len)
-			init_sprite_accessory_subtypes(/datum/sprite_accessory/facial_hair, GLOB.facial_hair_styles_list, GLOB.facial_hair_styles_male_list, GLOB.facial_hair_styles_female_list)
-		L[DNA_FACIAL_HAIR_STYLE_BLOCK] = construct_block(GLOB.facial_hair_styles_list.Find(H.facial_hair_style), GLOB.facial_hair_styles_list.len)
-		L[DNA_FACIAL_HAIR_COLOR_BLOCK] = sanitize_hexcolor(H.facial_hair_color)
+		if(!GLOB.tail_hair_styles_list.len)
+			init_sprite_accessory_subtypes(/datum/sprite_accessory/tail_hair, GLOB.tail_hair_styles_list, GLOB.tail_hair_styles_male_list, GLOB.tail_hair_styles_female_list)
+		L[DNA_tail_hair_STYLE_BLOCK] = construct_block(GLOB.tail_hair_styles_list.Find(H.tail_hair_style), GLOB.tail_hair_styles_list.len)
+		L[DNA_tail_hair_COLOR_BLOCK] = sanitize_hexcolor(H.tail_hair_color)
 		L[DNA_SKIN_TONE_BLOCK] = construct_block(GLOB.skin_tones.Find(H.skin_tone), GLOB.skin_tones.len)
 
 
@@ -147,16 +147,16 @@
 	switch(blocknumber)
 		if(DNA_HAIR_COLOR_BLOCK)
 			setblock(uni_identity, blocknumber, sanitize_hexcolor(H.hair_color))
-		if(DNA_FACIAL_HAIR_COLOR_BLOCK)
-			setblock(uni_identity, blocknumber, sanitize_hexcolor(H.facial_hair_color))
+		if(DNA_tail_hair_COLOR_BLOCK)
+			setblock(uni_identity, blocknumber, sanitize_hexcolor(H.tail_hair_color))
 		if(DNA_SKIN_TONE_BLOCK)
 			setblock(uni_identity, blocknumber, construct_block(GLOB.skin_tones.Find(H.skin_tone), GLOB.skin_tones.len))
 		if(DNA_EYE_COLOR_BLOCK)
 			setblock(uni_identity, blocknumber, sanitize_hexcolor(H.eye_color))
 		if(DNA_GENDER_BLOCK)
 			setblock(uni_identity, blocknumber, construct_block((H.gender!=MALE)+1, 2))
-		if(DNA_FACIAL_HAIR_STYLE_BLOCK)
-			setblock(uni_identity, blocknumber, construct_block(GLOB.facial_hair_styles_list.Find(H.facial_hair_style), GLOB.facial_hair_styles_list.len))
+		if(DNA_tail_hair_STYLE_BLOCK)
+			setblock(uni_identity, blocknumber, construct_block(GLOB.tail_hair_styles_list.Find(H.tail_hair_style), GLOB.tail_hair_styles_list.len))
 		if(DNA_HAIR_STYLE_BLOCK)
 			setblock(uni_identity, blocknumber, construct_block(GLOB.hair_styles_list.Find(H.hair_style), GLOB.hair_styles_list.len))
 		if(DNA_GENDER_BLOCK)
@@ -322,10 +322,10 @@
 	..()
 	var/structure = dna.uni_identity
 	hair_color = sanitize_hexcolor(getblock(structure, DNA_HAIR_COLOR_BLOCK))
-	facial_hair_color = sanitize_hexcolor(getblock(structure, DNA_FACIAL_HAIR_COLOR_BLOCK))
+	tail_hair_color = sanitize_hexcolor(getblock(structure, DNA_tail_hair_COLOR_BLOCK))
 	skin_tone = GLOB.skin_tones[deconstruct_block(getblock(structure, DNA_SKIN_TONE_BLOCK), GLOB.skin_tones.len)]
 	eye_color = sanitize_hexcolor(getblock(structure, DNA_EYE_COLOR_BLOCK))
-	facial_hair_style = GLOB.facial_hair_styles_list[deconstruct_block(getblock(structure, DNA_FACIAL_HAIR_STYLE_BLOCK), GLOB.facial_hair_styles_list.len)]
+	tail_hair_style = GLOB.tail_hair_styles_list[deconstruct_block(getblock(structure, DNA_tail_hair_STYLE_BLOCK), GLOB.tail_hair_styles_list.len)]
 	hair_style = GLOB.hair_styles_list[deconstruct_block(getblock(structure, DNA_HAIR_STYLE_BLOCK), GLOB.hair_styles_list.len)]
 	if(icon_update)
 		update_body()

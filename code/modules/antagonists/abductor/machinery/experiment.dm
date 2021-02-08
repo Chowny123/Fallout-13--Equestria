@@ -80,10 +80,10 @@
 		hair.Blend("#[H.hair_color]", ICON_MULTIPLY)
 		eyes.Blend(hair, ICON_OVERLAY)
 
-	S = GLOB.facial_hair_styles_list[H.facial_hair_style]
+	S = GLOB.tail_hair_styles_list[H.tail_hair_style]
 	if(S && (FACEHAIR in H.dna.species.species_traits))
 		var/icon/facial = icon("icon" = S.icon, "icon_state" = "[S.icon_state]")
-		facial.Blend("#[H.facial_hair_color]", ICON_MULTIPLY)
+		facial.Blend("#[H.tail_hair_color]", ICON_MULTIPLY)
 		eyes.Blend(facial, ICON_OVERLAY)
 
 	if(eyes)

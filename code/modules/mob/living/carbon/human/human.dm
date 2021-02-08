@@ -651,9 +651,9 @@
 
 //Used for new human mobs created by cloning/goleming/podding
 /mob/living/carbon/human/proc/set_cloned_appearance()
-	if(dna.features["body_model"] == MALE)		facial_hair_style = "Full Beard"
+	if(dna.features["body_model"] == MALE)		tail_hair_style = "Full Beard"
 	else
-		facial_hair_style = "Shaved"
+		tail_hair_style = "Shaved"
 	hair_style = pick("Bedhead", "Bedhead 2", "Bedhead 3")
 	underwear = "Nude"
 	undershirt = "Nude"

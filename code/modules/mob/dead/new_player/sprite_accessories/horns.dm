@@ -5,6 +5,7 @@
 	name = "None"
 	icon_state = "none"
 
+/*
 /datum/sprite_accessory/horns/simple
 	name = "Simple"
 	icon_state = "simple"
@@ -24,3 +25,7 @@
 /datum/sprite_accessory/horns/angler
 	name = "Angeler"
 	icon_state = "angler"
+*/
+/datum/sprite_accessory/horns/unicorn
+	name = "Unicorn"
+	icon_state = "unicorn"

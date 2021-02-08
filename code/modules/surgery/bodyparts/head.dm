@@ -23,8 +23,8 @@
 	var/hair_style = "Bald"
 	var/hair_alpha = 255
 	//Facial hair colour and style
-	var/facial_hair_color = "000"
-	var/facial_hair_style = "Shaved"
+	var/tail_hair_color = "000"
+	var/tail_hair_style = "Shaved"
 	//Eye Colouring
 
 	var/obj/item/organ/eyes/eyes = null
@@ -70,7 +70,7 @@
 	if(C.has_trait(TRAIT_HUSK))
 		real_name = "Unknown"
 		hair_style = "Bald"
-		facial_hair_style = "Shaved"
+		tail_hair_style = "Shaved"
 		lip_style = null
 
 	else if(!animal_origin)
@@ -78,19 +78,19 @@
 		var/datum/species/S = H.dna.species
 
 		//Facial hair
-		if(H.facial_hair_style && (FACEHAIR in S.species_traits))
-			facial_hair_style = H.facial_hair_style
+		if(H.tail_hair_style && (FACEHAIR in S.species_traits))
+			tail_hair_style = H.tail_hair_style
 			if(S.hair_color)
 				if(S.hair_color == "mutcolor")
-					facial_hair_color = H.dna.features["mcolor"]
+					tail_hair_color = H.dna.features["mcolor"]
 				else
-					facial_hair_color = S.hair_color
+					tail_hair_color = S.hair_color
 			else
-				facial_hair_color = H.facial_hair_color
+				tail_hair_color = H.tail_hair_color
 			hair_alpha = S.hair_alpha
 		else
-			facial_hair_style = "Shaved"
-			facial_hair_color = "000"
+			tail_hair_style = "Shaved"
+			tail_hair_color = "000"
 			hair_alpha = 255
 		//Hair
 		if(H.hair_style && (HAIR in S.species_traits))
@@ -133,11 +133,11 @@
 
 		if(status != BODYPART_ROBOTIC) //having a robotic head hides certain features.
 			//facial hair
-			if(facial_hair_style)
-				var/datum/sprite_accessory/S = GLOB.facial_hair_styles_list[facial_hair_style]
+			if(tail_hair_style)
+				var/datum/sprite_accessory/S = GLOB.tail_hair_styles_list[tail_hair_style]
 				if(S)
 					var/image/facial_overlay = image(S.icon, "[S.icon_state]", -HAIR_LAYER, SOUTH)
-					facial_overlay.color = "#" + facial_hair_color
+					facial_overlay.color = "#" + tail_hair_color
 					facial_overlay.alpha = hair_alpha
 					. += facial_overlay
 

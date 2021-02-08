@@ -37,9 +37,9 @@
 	var/ghost_hair_style
 	var/ghost_hair_color
 	var/mutable_appearance/ghost_hair
-	var/ghost_facial_hair_style
-	var/ghost_facial_hair_color
-	var/mutable_appearance/ghost_facial_hair
+	var/ghost_tail_hair_style
+	var/ghost_tail_hair_color
+	var/mutable_appearance/ghost_tail_hair
 	var/random = TRUE //if you want random names for ghosts or not
 
 /mob/living/simple_animal/hostile/retaliate/ghost/Initialize()
@@ -59,8 +59,8 @@
 		ghost_hair.alpha = 200
 		ghost_hair.color = ghost_hair_color
 		add_overlay(ghost_hair)
-	if(ghost_facial_hair_style != null)
-		ghost_facial_hair = mutable_appearance('icons/mob/human_face.dmi', "facial_[ghost_facial_hair_style]", -HAIR_LAYER)
-		ghost_facial_hair.alpha = 200
-		ghost_facial_hair.color = ghost_facial_hair_color
-		add_overlay(ghost_facial_hair)
+	if(ghost_tail_hair_style != null)
+		ghost_tail_hair = mutable_appearance('icons/mob/human_face.dmi', "facial_[ghost_tail_hair_style]", -HAIR_LAYER)
+		ghost_tail_hair.alpha = 200
+		ghost_tail_hair.color = ghost_tail_hair_color
+		add_overlay(ghost_tail_hair)

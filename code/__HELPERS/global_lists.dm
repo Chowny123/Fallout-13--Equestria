@@ -6,7 +6,7 @@
 	//hair
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/hair, GLOB.hair_styles_list, GLOB.hair_styles_male_list, GLOB.hair_styles_female_list)
 	//facial hair
-	init_sprite_accessory_subtypes(/datum/sprite_accessory/facial_hair, GLOB.facial_hair_styles_list, GLOB.facial_hair_styles_male_list, GLOB.facial_hair_styles_female_list)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/tail_hair, GLOB.tail_hair_styles_list, GLOB.tail_hair_styles_male_list, GLOB.tail_hair_styles_female_list)
 	//underwear
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/underwear/bottom, GLOB.underwear_list, GLOB.underwear_m, GLOB.underwear_f)
 	//undershirt

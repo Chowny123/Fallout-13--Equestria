@@ -20,9 +20,9 @@
 	H.mind.special_role = "Santa"
 
 	H.hair_style = "Long Hair"
-	H.facial_hair_style = "Full Beard"
+	H.tail_hair_style = "Full Beard"
 	H.hair_color = "FFF"
-	H.facial_hair_color = "FFF"
+	H.tail_hair_color = "FFF"
 
 	var/obj/item/storage/backpack/bag = H.back
 	var/obj/item/a_gift/gift = new(H)

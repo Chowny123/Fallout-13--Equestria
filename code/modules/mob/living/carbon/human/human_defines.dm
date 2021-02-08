@@ -11,8 +11,8 @@
 	var/hair_style = "Bald"
 
 	//Facial hair colour and style
-	var/facial_hair_color = "000"
-	var/facial_hair_style = "Shaved"
+	var/tail_hair_color = "000"
+	var/tail_hair_style = "Shaved"
 
 	//Eye colour
 	var/eye_color = "000"
@@ -50,7 +50,7 @@
 
 	var/name_override //For temporary visible name changes
 	var/genital_override = FALSE //Force genitals on things incase of chems
- 
+
 	var/datum/personal_crafting/handcrafting
 	var/datum/physiology/physiology
 

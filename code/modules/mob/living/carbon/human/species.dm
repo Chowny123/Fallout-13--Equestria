@@ -345,8 +345,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(M.flags_inv & HIDEFACIALHAIR)
 			facialhair_hidden = TRUE
 
-	if(H.facial_hair_style && (FACEHAIR in species_traits) && (!facialhair_hidden || dynamic_fhair_suffix))
-		S = GLOB.facial_hair_styles_list[H.facial_hair_style]
+	if(H.tail_hair_style && (FACEHAIR in species_traits) && (!facialhair_hidden || dynamic_fhair_suffix))
+		S = GLOB.tail_hair_styles_list[H.tail_hair_style]
 		if(S)
 
 			//List of all valid dynamic_fhair_suffixes
@@ -374,7 +374,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 					else
 						facial_overlay.color = "#" + hair_color
 				else
-					facial_overlay.color = "#" + H.facial_hair_color
+					facial_overlay.color = "#" + H.tail_hair_color
 			else
 				facial_overlay.color = forced_colour
 
@@ -699,7 +699,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 							else
 								accessory_overlay.color = "#[H.hair_color]"
 						if(FACEHAIR)
-							accessory_overlay.color = "#[H.facial_hair_color]"
+							accessory_overlay.color = "#[H.tail_hair_color]"
 						if(EYECOLOR)
 							accessory_overlay.color = "#[H.eye_color]"
 				else
@@ -1093,7 +1093,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 /datum/species/proc/go_bald(mob/living/carbon/human/H)
 	if(QDELETED(H))	//may be called from a timer
 		return
-	H.facial_hair_style = "Shaved"
+	H.tail_hair_style = "Shaved"
 	H.hair_style = "Bald"
 	H.update_hair()
 

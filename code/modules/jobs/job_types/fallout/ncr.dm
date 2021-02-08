@@ -16,7 +16,6 @@
 	satchel = /obj/item/storage/backpack/satchel/trekker
 	ears = /obj/item/radio/headset/headset_ncr
 	shoes = /obj/item/clothing/shoes/f13/military/ncr
-	gloves = /obj/item/clothing/gloves/f13/ncr
 
 /*
 Colonel
@@ -328,7 +327,6 @@ Sergeant
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
 	neck = 			/obj/item/storage/belt/holster
 	shoes = 		/obj/item/clothing/shoes/f13/military/ncr
-	gloves =        /obj/item/clothing/gloves/f13/ncr
 	backpack_contents = list(
 		/obj/item/kitchen/knife/combat/survival=1, \
 		/obj/item/gun/ballistic/automatic/pistol/ninemil=1, \
@@ -812,7 +810,6 @@ Recruit
 		/obj/item/clothing/under/f13/cowboyt=1,
 		/obj/item/clothing/suit/det_suit=1,
 		/obj/item/clothing/shoes/f13/military/ncr=1,
-		/obj/item/clothing/gloves/f13/ncr=1,
 		/obj/item/kitchen/knife/combat=1
 		)
 

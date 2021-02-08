@@ -12,7 +12,7 @@
 	name = "Syndicate Operative"
 	id_job = "Operative"
 	hair_style = "Bald"
-	facial_hair_style = "Shaved"
+	tail_hair_style = "Shaved"
 	outfit = /datum/outfit/syndicatesoldiercorpse
 
 /datum/outfit/syndicatesoldiercorpse
@@ -32,7 +32,7 @@
 	name = "Syndicate Commando"
 	id_job = "Operative"
 	hair_style = "Bald"
-	facial_hair_style = "Shaved"
+	tail_hair_style = "Shaved"
 	outfit = /datum/outfit/syndicatecommandocorpse
 
 /datum/outfit/syndicatecommandocorpse
@@ -52,7 +52,7 @@
 	name = "Syndicate Stormtrooper"
 	id_job = "Operative"
 	hair_style = "Bald"
-	facial_hair_style = "Shaved"
+	tail_hair_style = "Shaved"
 	outfit = /datum/outfit/syndicatestormtroopercorpse
 
 /datum/outfit/syndicatestormtroopercorpse
@@ -72,14 +72,14 @@
 	instant = TRUE
 	skin_tone = "caucasian1"
 	hair_style = "Bald"
-	facial_hair_style = "Shaved"
+	tail_hair_style = "Shaved"
 
 /obj/effect/mob_spawn/human/corpse/pirate
 	name = "Pirate"
 	skin_tone = "Caucasian1" //all pirates are white because it's easier that way
 	outfit = /datum/outfit/piratecorpse
 	hair_style = "Bald"
-	facial_hair_style = "Shaved"
+	tail_hair_style = "Shaved"
 
 /datum/outfit/piratecorpse
 	name = "Pirate Corpse"
@@ -103,7 +103,7 @@
 	name = "Russian"
 	outfit = /datum/outfit/russiancorpse
 	hair_style = "Bald"
-	facial_hair_style = "Shaved"
+	tail_hair_style = "Shaved"
 
 /datum/outfit/russiancorpse
 	name = "Russian Corpse"
@@ -154,7 +154,7 @@
 	name = "Space Wizard Corpse"
 	outfit = /datum/outfit/wizardcorpse
 	hair_style = "Bald"
-	facial_hair_style = "Long Beard"
+	tail_hair_style = "Long Beard"
 	skin_tone = "Caucasian1"
 
 /datum/outfit/wizardcorpse
@@ -171,7 +171,7 @@
 	id_access = "Security Officer"
 	outfit = /datum/outfit/nanotrasensoldiercorpse2
 	hair_style = "Bald"
-	facial_hair_style = "Shaved"
+	tail_hair_style = "Shaved"
 
 /datum/outfit/nanotrasensoldiercorpse2
 	name = "NT Private Security Officer Corpse"
@@ -190,7 +190,7 @@
 	id_job = "Cat Surgeon"
 	id_access_list = list(ACCESS_AWAY_GENERAL, ACCESS_AWAY_MAINT)
 	hair_style = "Cut Hair"
-	facial_hair_style = "Watson Mustache"
+	tail_hair_style = "Watson Mustache"
 	skin_tone = "caucasian1"
 	outfit = /datum/outfit/cat_butcher
 
@@ -211,7 +211,7 @@ obj/effect/mob_spawn/human/corpse/raider
     shoes = /obj/item/clothing/shoes/jackboots
     head = /obj/item/clothing/head/helmet/f13/metalmask
     hair_style = "Bald"
-    facial_hair_style = "Shaved"
+    tail_hair_style = "Shaved"
 
 obj/effect/mob_spawn/human/corpse/raidermelee
     name = "Raider Melee Corpse"
@@ -220,7 +220,7 @@ obj/effect/mob_spawn/human/corpse/raidermelee
     shoes = /obj/item/clothing/shoes/jackboots
     head = /obj/item/clothing/head/helmet/skull
     hair_style = "Bald"
-    facial_hair_style = "Shaved"
+    tail_hair_style = "Shaved"
 
 /obj/effect/mob_spawn/human/corpse/raiderranged
     name = "Raider Ranged Corpse"
@@ -229,7 +229,7 @@ obj/effect/mob_spawn/human/corpse/raidermelee
     shoes = /obj/item/clothing/shoes/jackboots
     head = /obj/item/clothing/head/helmet/skull
     hair_style = "Bald"
-    facial_hair_style = "Shaved"
+    tail_hair_style = "Shaved"
 
 /obj/effect/mob_spawn/human/corpse/raiderrangedsulphite
 	name = "Sulphite Raider Ranged Corpse"
@@ -237,7 +237,7 @@ obj/effect/mob_spawn/human/corpse/raidermelee
 	suit = /obj/item/clothing/suit/armor/f13/leather_jacket/combat
 	shoes = /obj/item/clothing/shoes/jackboots
 	hair_style = "Bald"
-	facial_hair_style = "Shaved"
+	tail_hair_style = "Shaved"
 
 /obj/effect/mob_spawn/human/corpse/raiderboss
     name = "Raider Boss"
@@ -247,7 +247,7 @@ obj/effect/mob_spawn/human/corpse/raidermelee
     gloves = /obj/item/clothing/gloves/color/black
     head = /obj/item/clothing/head/helmet/f13
     hair_style = "Bald"
-    facial_hair_style = "Shaved"
+    tail_hair_style = "Shaved"
 
 obj/effect/mob_spawn/human/corpse/raiderbossalt
     name = "Raider Boss Corpse"
@@ -257,7 +257,7 @@ obj/effect/mob_spawn/human/corpse/raiderbossalt
     gloves = /obj/item/clothing/gloves/color/black
     head = /obj/item/clothing/head/helmet/knight/fluff/metal/reinforced
     hair_style = "Bald"
-    facial_hair_style = "Shaved"
+    tail_hair_style = "Shaved"
 
 /obj/effect/mob_spawn/human/corpse/chineseremnant
 	name = "Chinese Remnant Corpse"
@@ -265,7 +265,7 @@ obj/effect/mob_spawn/human/corpse/raiderbossalt
 	shoes = /obj/item/clothing/shoes/jackboots
 	head = /obj/item/clothing/head/ushanka
 	hair_style = "Bald"
-	facial_hair_style = "Shaved"
+	tail_hair_style = "Shaved"
 	mob_species = /datum/species/ghoul
 
 /obj/effect/mob_spawn/human/corpse/chineseremnant/pistol

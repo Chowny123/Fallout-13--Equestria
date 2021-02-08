@@ -72,8 +72,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/backbag = DBACKPACK				//backpack type
 	var/hair_style = "Bald"				//Hair type
 	var/hair_color = "000"				//Hair color
-	var/facial_hair_style = "Shaved"	//Face hair type
-	var/facial_hair_color = "000"		//Facial hair color
+	var/tail_hair_style = "Shaved"	//Face hair type
+	var/tail_hair_color = "000"		//Facial hair color
 	var/skin_tone = "caucasian1"		//Skin color
 
 	var/has_dick = 0						//Do they have a penis? (for ERP verbs and surgery)
@@ -439,9 +439,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				dat += "<h3>Facial Hair Style</h3>"
 
-				dat += "<a href='?_src_=prefs;preference=facial_hair_style;task=input'>[facial_hair_style]</a><BR>"
+				dat += "<a href='?_src_=prefs;preference=tail_hair_style;task=input'>[tail_hair_style]</a><BR>"
 				dat += "<a href='?_src_=prefs;preference=previous_facehair_style;task=input'>&lt;</a> <a href='?_src_=prefs;preference=next_facehair_style;task=input'>&gt;</a><BR>"
-				dat += "<span style='border: 1px solid #161616; background-color: #[facial_hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=facial;task=input'>Change</a><BR>"
+				dat += "<span style='border: 1px solid #161616; background-color: #[tail_hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=facial;task=input'>Change</a><BR>"
 
 				dat += "</td>"
 
@@ -1580,9 +1580,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				if("hair_style")
 					hair_style = random_hair_style(gender)
 				if("facial")
-					facial_hair_color = random_short_color()
-				if("facial_hair_style")
-					facial_hair_style = random_facial_hair_style(gender)
+					tail_hair_color = random_short_color()
+				if("tail_hair_style")
+					tail_hair_style = random_tail_hair_style(gender)
 				if("underwear")
 					underwear = random_underwear(gender)
 					undie_color = random_short_color()
@@ -1732,30 +1732,30 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						hair_style = previous_list_item(hair_style, GLOB.hair_styles_female_list)
 
 				if("facial")
-					var/new_facial = input(user, "Choose your character's facial-hair colour:", "Character Preference","#"+facial_hair_color) as color|null
+					var/new_facial = input(user, "Choose your character's facial-hair colour:", "Character Preference","#"+tail_hair_color) as color|null
 					if(new_facial)
-						facial_hair_color = sanitize_hexcolor(new_facial)
+						tail_hair_color = sanitize_hexcolor(new_facial)
 
-				if("facial_hair_style")
-					var/new_facial_hair_style
+				if("tail_hair_style")
+					var/new_tail_hair_style
 					if(gender == MALE)
-						new_facial_hair_style = input(user, "Choose your character's facial-hair style:", "Character Preference")  as null|anything in GLOB.facial_hair_styles_male_list
+						new_tail_hair_style = input(user, "Choose your character's facial-hair style:", "Character Preference")  as null|anything in GLOB.tail_hair_styles_male_list
 					else
-						new_facial_hair_style = input(user, "Choose your character's facial-hair style:", "Character Preference")  as null|anything in GLOB.facial_hair_styles_female_list
-					if(new_facial_hair_style)
-						facial_hair_style = new_facial_hair_style
+						new_tail_hair_style = input(user, "Choose your character's facial-hair style:", "Character Preference")  as null|anything in GLOB.tail_hair_styles_female_list
+					if(new_tail_hair_style)
+						tail_hair_style = new_tail_hair_style
 
 				if("next_facehair_style")
 					if (gender == MALE)
-						facial_hair_style = next_list_item(facial_hair_style, GLOB.facial_hair_styles_male_list)
+						tail_hair_style = next_list_item(tail_hair_style, GLOB.tail_hair_styles_male_list)
 					else
-						facial_hair_style = next_list_item(facial_hair_style, GLOB.facial_hair_styles_female_list)
+						tail_hair_style = next_list_item(tail_hair_style, GLOB.tail_hair_styles_female_list)
 
 				if("previous_facehair_style")
 					if (gender == MALE)
-						facial_hair_style = previous_list_item(facial_hair_style, GLOB.facial_hair_styles_male_list)
+						tail_hair_style = previous_list_item(tail_hair_style, GLOB.tail_hair_styles_male_list)
 					else
-						facial_hair_style = previous_list_item(facial_hair_style, GLOB.facial_hair_styles_female_list)
+						tail_hair_style = previous_list_item(tail_hair_style, GLOB.tail_hair_styles_female_list)
 
 				if("cycle_bg")
 					bgstate = next_list_item(bgstate, bgstate_options)
@@ -2306,11 +2306,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			organ_eyes.eye_color = eye_color
 		organ_eyes.old_eye_color = eye_color
 	character.hair_color = hair_color
-	character.facial_hair_color = facial_hair_color
+	character.tail_hair_color = tail_hair_color
 
 	character.skin_tone = skin_tone
 	character.hair_style = hair_style
-	character.facial_hair_style = facial_hair_style
+	character.tail_hair_style = tail_hair_style
 	character.saved_underwear = underwear
 	character.undershirt = undershirt
 	character.saved_undershirt = undershirt

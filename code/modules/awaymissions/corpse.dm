@@ -141,7 +141,7 @@
 	var/suit_store = -1
 
 	var/hair_style
-	var/facial_hair_style
+	var/tail_hair_style
 	var/skin_tone
 
 /obj/effect/mob_spawn/human/Initialize()
@@ -165,10 +165,10 @@
 		H.hair_style = hair_style
 	else
 		H.hair_style = random_hair_style(gender)
-	if(facial_hair_style)
-		H.facial_hair_style = facial_hair_style
+	if(tail_hair_style)
+		H.tail_hair_style = tail_hair_style
 	else
-		H.facial_hair_style = random_facial_hair_style(gender)
+		H.tail_hair_style = random_tail_hair_style(gender)
 	if(skin_tone)
 		H.skin_tone = skin_tone
 	else

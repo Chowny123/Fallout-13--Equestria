@@ -44,9 +44,9 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 	var/hair_style
 	var/hair_color
 	var/mutable_appearance/hair_overlay
-	var/facial_hair_style
-	var/facial_hair_color
-	var/mutable_appearance/facial_hair_overlay
+	var/tail_hair_style
+	var/tail_hair_color
+	var/mutable_appearance/tail_hair_overlay
 
 	var/updatedir = 1						//Do we have to update our dir as the ghost moves around?
 	var/lastsetting = null	//Stores the last setting that ghost_others was set to, for a little more efficiency when we update ghost images. Null means no update is necessary
@@ -105,8 +105,8 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 				hair_style = body_human.hair_style
 				hair_color = brighten_color(body_human.hair_color)
 			if(FACEHAIR in body_human.dna.species.species_traits)
-				facial_hair_style = body_human.facial_hair_style
-				facial_hair_color = brighten_color(body_human.facial_hair_color)
+				tail_hair_style = body_human.tail_hair_style
+				tail_hair_color = brighten_color(body_human.tail_hair_color)
 
 	update_icon()
 
@@ -184,9 +184,9 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 		cut_overlay(hair_overlay)
 		hair_overlay = null
 
-	if(facial_hair_overlay)
-		cut_overlay(facial_hair_overlay)
-		facial_hair_overlay = null
+	if(tail_hair_overlay)
+		cut_overlay(tail_hair_overlay)
+		tail_hair_overlay = null
 
 
 	if(new_form)
@@ -204,14 +204,14 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 
 	if(ghost_accs == GHOST_ACCS_FULL && (icon_state in GLOB.ghost_forms_with_accessories_list)) //check if this form supports accessories and if the client wants to show them
 		var/datum/sprite_accessory/S
-		if(facial_hair_style)
-			S = GLOB.facial_hair_styles_list[facial_hair_style]
+		if(tail_hair_style)
+			S = GLOB.tail_hair_styles_list[tail_hair_style]
 			if(S)
-				facial_hair_overlay = mutable_appearance(S.icon, "[S.icon_state]", -HAIR_LAYER)
-				if(facial_hair_color)
-					facial_hair_overlay.color = "#" + facial_hair_color
-				facial_hair_overlay.alpha = 200
-				add_overlay(facial_hair_overlay)
+				tail_hair_overlay = mutable_appearance(S.icon, "[S.icon_state]", -HAIR_LAYER)
+				if(tail_hair_color)
+					tail_hair_overlay.color = "#" + tail_hair_color
+				tail_hair_overlay.alpha = 200
+				add_overlay(tail_hair_overlay)
 		if(hair_style)
 			S = GLOB.hair_styles_list[hair_style]
 			if(S)
@@ -740,8 +740,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		hair_style = client.prefs.hair_style
 		hair_color = brighten_color(client.prefs.hair_color)
 	if(FACEHAIR in client.prefs.pref_species.species_traits)
-		facial_hair_style = client.prefs.facial_hair_style
-		facial_hair_color = brighten_color(client.prefs.facial_hair_color)
+		tail_hair_style = client.prefs.tail_hair_style
+		tail_hair_color = brighten_color(client.prefs.tail_hair_color)
 
 	update_icon()
 
